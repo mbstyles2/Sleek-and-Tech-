@@ -160,6 +160,86 @@
       font-size: 0.95rem;
     }
 
+    /* Game section */
+    .game-showcase {
+  text-align: center;
+  padding: 70px 30px;
+  background: linear-gradient(135deg, #05010f, #081338);
+  color: #fff;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #00e0ff;
+  text-shadow: 0 0 15px #00e0ff;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.game-card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.game-card h3 {
+  color: #00e0ff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.game-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+.game-card:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+#game-message {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: #00e0ff;
+  text-shadow: 0 0 10px #00e0ff;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .games-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
     /* ==== FOOTER ==== */
     footer {
       text-align: center;
@@ -282,6 +362,52 @@ Simulation games help people understand complex systems like city management, ec
 When balanced with healthy habits, gaming can enrich minds, build skills, and unite people across worlds — both virtual and real.</p><br>
   </div>
 
+  <section class="game-showcase">
+  <h2 class="section-title">🎮 Revolutionary Games That Changed the World</h2>
+  <div class="games-container">
+
+    <div class="game-card" data-game="Roblox">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Roblox_logo_2017.svg" alt="Roblox Logo">
+      <h3>Roblox</h3>
+      <p>A universe of imagination — where players create worlds, games, and limitless experiences.</p>
+    </div>
+
+    <div class="game-card" data-game="Minecraft">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png" alt="Minecraft Logo">
+      <h3>Minecraft</h3>
+      <p>From blocks to boundless creativity — the sandbox that defined a generation.</p>
+    </div>
+
+    <div class="game-card" data-game="Fortnite">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/09/Fortnite_cover_art.jpg" alt="Fortnite Logo">
+      <h3>Fortnite</h3>
+      <p>Battle, build, and dance your way to victory — the world’s pop-culture gaming hub.</p>
+    </div>
+
+    <div class="game-card" data-game="Among Us">
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Among_Us_cover_art.jpg" alt="Among Us Logo">
+      <h3>Among Us</h3>
+      <p>Trust no one. Work together — or betray everyone — in this social deception hit.</p>
+    </div>
+
+    <div class="game-card" data-game="GTA V">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V Logo">
+      <h3>GTA V</h3>
+      <p>Open-world chaos, freedom, and storytelling at its cinematic best.</p>
+    </div>
+
+    <div class="game-card" data-game="PUBG">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/PlayerUnknown%27s_Battlegrounds_cover.jpg" alt="PUBG Logo">
+      <h3>PUBG</h3>
+      <p>The battleground that launched a global survival revolution — 100 enter, 1 survives.</p>
+    </div>
+
+  </div>
+
+  <div id="game-message">Hover or tap a game to explore its revolution!</div>
+</section>
+
+
   <footer>
     <p>© 2050 Reality Labs | Designed for the Next Dimension</p>
   </footer>
@@ -295,6 +421,24 @@ When balanced with healthy habits, gaming can enrich minds, build skills, and un
         card.style.boxShadow = `0 0 ${30 * glow}px rgba(255,0,255,${0.4 * glow})`;
       });
     });
+
+
+const cards = document.querySelectorAll(".game-card");
+const message = document.getElementById("game-message");
+
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    message.textContent = `${card.dataset.game} changed the game forever 🚀`;
+  });
+  card.addEventListener("mouseleave", () => {
+    message.textContent = "Hover or tap a game to explore its revolution!";
+  });
+  card.addEventListener("click", () => {
+    message.textContent = `🔥 ${card.dataset.game}: A true gaming revolution! 🔥`;
+  });
+});
+
+
   </script>
 </body>
 </html>
