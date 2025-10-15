@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2050: The Future of Reality</title>
+  <style>
+    /* ==== GLOBAL ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      color: #e0e0ff;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+    body {
+      background: radial-gradient(circle at 20% 20%, #040016, #000010 70%);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ==== BACKGROUND ANIMATION ==== */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-radial-gradient(circle, rgba(0,255,255,0.1) 0, rgba(255,0,255,0.1) 2px, transparent 3px);
+      animation: pulse 8s infinite linear;
+      pointer-events: none;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.2); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 0.4; }
+    }
+
+    /* ==== NAVBAR ==== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 20, 0.6);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: #ff00ff;
+    }
+
+    /* ==== HERO SECTION ==== */
+    header {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(255,255,255,0.2);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #c0b0ff;
+      letter-spacing: 1px;
+    }
+
+    /* ==== CONTENT SECTIONS ==== */
+    .section-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      padding: 80px 100px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.4s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+    }
+
+    .card h2 {
+      color: #00ffff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .card p {
+      color: #cfcfff;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 15px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">R2050</div>
+    <div class="nav-links">
+      <a href="#gaming">Gaming</a>
+      <a href="#rapture">The Rapture</a>
+      <a href="#rave">Rave Tech</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Welcome to the Future</h1>
+    <p>Explore the evolution of Gaming, Revelation, and Tech in the year 2050 and beyond.</p>
+  </header>
+
+  <section class="section-container">
+    <div class="card" id="gaming">
+      <h2>⚡ Gaming 2050</h2>
+      <p>Step into neural gaming realms powered by emotion-based AI and full sensory immersion. Experience games that play you back.</p>
+      <p>
+        🎮 The Good Effects of Gaming
+
+Gaming has evolved far beyond just a form of entertainment — it’s now a dynamic blend of art, science, and technology that’s shaping how people think, learn, and connect. Here are some of the most positive effects that modern gaming brings:
+
+🧠 1. Cognitive Growth and Problem-Solving Skills
+
+Many games today — from strategy titles to open-world adventures — challenge players to think critically, plan ahead, and adapt quickly.
+
+Puzzle and simulation games sharpen logic and reasoning.
+
+Action and survival games improve decision-making under pressure.
+
+Story-driven RPGs boost pattern recognition and memory.
+
+In essence, gaming has become a kind of interactive mental gym that keeps the brain active and engaged.
+
+👁️ 2. Improved Focus and Hand-Eye Coordination
+
+Fast-paced games like shooters or racing simulators require precise timing and quick reactions.
+Studies show gamers often develop better spatial awareness, reaction time, and coordination between what they see and how they respond.
+This heightened visual attention can even translate into better real-world multitasking skills.
+
+🤝 3. Teamwork and Social Connection
+
+Modern gaming is a deeply social experience. Online multiplayer worlds, guilds, and esports teams have created global communities where teamwork and communication thrive.
+
+Players learn to collaborate, lead, and strategize with others.
+
+Friendships and even careers have been built around gaming ecosystems.
+
+Games have become digital meeting grounds for creativity, unity, and cross-cultural connection.
+
+💪 4. Emotional Resilience and Goal Setting
+
+Games teach persistence. Every level, boss battle, or competitive match trains players to fail, learn, and try again — an essential life skill.
+This repetitive reward structure encourages resilience, patience, and goal-oriented thinking that can carry into real-world ambitions.
+
+🎨 5. Creativity and Expression
+
+From world-building in Minecraft to storytelling in The Sims or design in Fortnite Creative, gaming has opened a door for players to create, not just consume.
+Many games now act as digital canvases, encouraging imagination, innovation, and artistic exploration — often inspiring careers in design, music, or technology.
+
+🌍 6. Education and Skill Development
+
+Gamification has entered schools, healthcare, and corporate training. Educational games teach STEM, languages, and even empathy in engaging ways.
+Simulation games help people understand complex systems like city management, economics, or survival — through interactive learning, not textbooks.
+
+💬 Final Thought
+
+Gaming isn’t just about fun anymore — it’s a powerful ecosystem for learning, connecting, and growing.
+When balanced with healthy habits, gaming can enrich minds, build skills, and unite people across worlds — both virtual and real.
+      </p>
+    </div>
+    <div class="card" id="rapture">
+      <h2>🌌 The Rapture</h2>
+      <p>Discover future interpretations of spirituality and technology. Is salvation real, fake or divine?</p>
+    </div>
+    <div class="card" id="rave">
+      <h2>🚀 Rave Tech Products</h2>
+      <p>Light-reactive wearables and self-aware gadgets that blend with your neural rhythm — redefining the rave experience.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2050 Reality Labs | Designed for the Next Dimension</p>
+  </footer>
+
+  <script>
+    // Simple glow scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const glow = Math.max(0, 1 - rect.top / window.innerHeight);
+        card.style.boxShadow = `0 0 ${30 * glow}px rgba(255,0,255,${0.4 * glow})`;
+      });
+    });
+  </script>
+</body>
+</html>
